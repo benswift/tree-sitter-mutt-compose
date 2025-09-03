@@ -1,0 +1,187 @@
+==================
+Attachment headers
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Files attached
+Attach: /home/user/document.pdf
+Attach: /home/user/photo.jpg
+
+Please find the attached files.
+
+---
+
+(source_file
+  (body))
+
+==================
+Multiple recipients
+==================
+
+From: sender@example.com
+To: user1@example.com, user2@example.com, user3@example.com
+Cc: team@example.com
+Bcc: hidden@example.com, another@example.com
+Subject: Team update
+
+Hello everyone!
+
+---
+
+(source_file
+  (body))
+
+==================
+MIME headers
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Test
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+
+Message with MIME headers.
+
+---
+
+(source_file
+  (body))
+
+==================
+Threading headers
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Re: Previous topic
+In-Reply-To: <20240101120000.GA12345@example.com>
+References: <20240101100000.GA11111@example.com> <20240101120000.GA12345@example.com>
+Message-ID: <20240102090000.GA22222@example.com>
+
+Continuing the thread...
+
+---
+
+(source_file
+  (body))
+
+==================
+PGP signed message
+==================
+
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+This is a signed message.
+
+It has multiple paragraphs.
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEE1234567890ABCDEFexampleFAkeKeyIDACQQLmay4ACgkQ
+exampleSignatureDataHere1234567890abcdefghijklmnopqrstuvwxyz
+MoreSignatureData==
+=AbCd
+-----END PGP SIGNATURE-----
+
+---
+
+(source_file
+  (body))
+
+==================
+PGP encrypted message
+==================
+
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
+tuvwxyz0123456789+/=EncryptedContentHereWithBase64Encoding==
+MoreEncryptedData1234567890abcdefghijklmnopqrstuvwxyz
+=aBcD
+-----END PGP MESSAGE-----
+
+---
+
+(source_file
+  (body))
+
+==================
+Mixed PGP and regular content
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Encrypted content below
+
+Please decrypt the following:
+
+-----BEGIN PGP MESSAGE-----
+
+hQEMA1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
+=aBcD
+-----END PGP MESSAGE-----
+
+Thanks!
+
+---
+
+(source_file
+  (body))
+
+==================
+Header with line continuation (note: not supported by current grammar)
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: This is a very long subject that would normally
+ continue on the next line with a space or tab prefix
+ to indicate continuation
+
+Message body here.
+
+---
+
+(source_file
+  (body))
+
+==================
+Custom X-headers
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Test
+X-Mailer: Mutt/2.2.12
+X-Priority: High
+X-Custom-Field: custom-value
+
+Body text.
+
+---
+
+(source_file
+  (body))
+
+==================
+Draft headers
+==================
+
+From: sender@example.com
+To: 
+Subject: [DRAFT] Unfinished email
+Date: 
+Reply-To: 
+
+TODO: Finish this email later.
+
+---
+
+(source_file
+  (body))
