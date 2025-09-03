@@ -1,0 +1,173 @@
+==================
+Simple quoted reply
+==================
+
+
+> This is a quoted line from the original email.
+> Another quoted line.
+
+This is my reply.
+
+---
+
+(source_file
+  (body))
+
+==================
+Nested quote levels
+==================
+
+
+>>> This is a deeply nested quote.
+>> This is less nested.
+> This is a single-level quote.
+
+My response here.
+
+---
+
+(source_file
+  (body))
+
+==================
+Mixed quotes and regular text
+==================
+
+
+On Mon, Jan 1, 2024, someone wrote:
+> Here's what they said.
+> It spans multiple lines.
+
+I disagree because:
+
+> Another quote here
+> with more context.
+
+That's my view.
+
+---
+
+(source_file
+  (body))
+
+==================
+Quote with attribution line
+==================
+
+
+On 2024-01-15 10:30, John Doe <john@example.com> wrote:
+> Original message text here.
+> More of the original message.
+>
+> Even with blank quoted lines.
+
+My reply starts here.
+
+---
+
+(source_file
+  (body))
+
+==================
+Interleaved quotes and responses
+==================
+
+
+> Question 1?
+
+Answer 1.
+
+> Question 2?
+
+Answer 2.
+
+> Question 3?
+
+Answer 3.
+
+---
+
+(source_file
+  (body))
+
+==================
+Headers with quoted reply
+==================
+
+From: me@example.com
+To: you@example.com
+Subject: Re: Your question
+
+On 2024-01-15, you wrote:
+> What do you think about this?
+> Is it a good idea?
+
+I think it's great! Here's why:
+
+> Especially this part
+> seems interesting.
+
+Agreed, that's the best part.
+
+---
+
+(source_file
+  (body))
+
+==================
+Quote markers with spaces
+==================
+
+
+ > Sometimes quotes have leading spaces
+  >> And varying indentation
+   >>> Like this
+
+> But usually they don't.
+
+---
+
+(source_file
+  (body))
+
+==================
+Quote with markdown formatting
+==================
+
+
+> ## Original heading
+> 
+> The original message had **bold** text.
+> 
+> - And lists
+> - Like this
+
+My reply also uses markdown:
+
+**Important:** I agree with the above.
+
+---
+
+(source_file
+  (body))
+
+==================
+Email signature with quotes
+==================
+
+
+> Previous message here.
+
+My response.
+
+Best regards,
+John
+
+-- 
+John Doe
+john@example.com
+
+---
+
+(source_file
+  (body))
