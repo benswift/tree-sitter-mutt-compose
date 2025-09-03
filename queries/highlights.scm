@@ -4,7 +4,7 @@
   value: (_) @string)
 
 ; Body
-(body) @text
+(body) @string
 
 ; Punctuation
 ":" @punctuation.delimiter
