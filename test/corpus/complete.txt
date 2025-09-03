@@ -1,0 +1,58 @@
+==================
+Empty file
+==================
+
+---
+
+(source_file)
+
+==================
+Just a blank line
+==================
+
+
+---
+
+(source_file)
+
+==================
+Body only (with leading blank)
+==================
+
+
+This is just body text.
+
+---
+
+(source_file
+  (body))
+
+==================
+Multiline body
+==================
+
+
+This is the first paragraph.
+
+This is the second paragraph
+with multiple lines.
+
+Final paragraph.
+
+---
+
+(source_file
+  (body))
+
+==================
+Body with special characters
+==================
+
+
+Body with special chars: !@#$%^&*()
+Unicode: ™ © ® → ← ↑ ↓
+
+---
+
+(source_file
+  (body))

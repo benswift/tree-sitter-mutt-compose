@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "mutt_compose",
+      "camelcase": "MuttCompose",
+      "title": "Mutt Compose",
+      "scope": "source.mutt_compose",
+      "file-types": [
+        "mutt_compose"
+      ],
+      "injection-regex": "^mutt_compose$",
+      "class-name": "TreeSitterMuttCompose"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "A grammar for (neo)mutt compose buffers",
+    "authors": [
+      {
+        "name": "Ben Swift",
+        "email": "ben@benswift.me",
+        "url": "https://benswift.me/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/benswift/tree-sitter-mutt-compose"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

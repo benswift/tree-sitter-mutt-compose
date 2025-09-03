@@ -5,26 +5,6 @@
     "fields": {}
   },
   {
-    "type": "headers",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "header",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "separator",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "source_file",
     "named": true,
     "root": true,
@@ -38,11 +18,7 @@
           "named": true
         },
         {
-          "type": "headers",
-          "named": true
-        },
-        {
-          "type": "separator",
+          "type": "header",
           "named": true
         }
       ]
