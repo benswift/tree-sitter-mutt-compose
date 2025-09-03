@@ -1,10 +1,5 @@
 [
   {
-    "type": "body",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "header",
     "named": true,
     "fields": {}
@@ -25,13 +20,18 @@
     }
   },
   {
+    "type": "separator",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "root": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "body",
@@ -39,6 +39,10 @@
         },
         {
           "type": "headers",
+          "named": true
+        },
+        {
+          "type": "separator",
           "named": true
         }
       ]
@@ -51,5 +55,9 @@
   {
     "type": ":",
     "named": false
+  },
+  {
+    "type": "body",
+    "named": true
   }
 ]
