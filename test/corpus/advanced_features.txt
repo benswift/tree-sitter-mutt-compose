@@ -185,3 +185,37 @@ TODO: Finish this email later.
 
 (source_file
   (body))
+
+==================
+Complete email with date header
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Meeting tomorrow
+Date: Tue, 3 Sep 2024 10:00:00 +1000
+
+Let's meet at 2pm.
+
+---
+
+(source_file
+  (body))
+
+==================
+Email with various date formats
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Date format test
+Date: Mon, 02 Sep 2024 15:45:30 -0500
+Message-ID: <20240902154530.ABC123@example.com>
+Reply-To: sender@example.org
+
+Testing different date formats and timezones.
+
+---
+
+(source_file
+  (body))
