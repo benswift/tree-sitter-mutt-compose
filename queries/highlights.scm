@@ -1,10 +1,8 @@
-; Headers
-(header
-  key: (_) @keyword
-  value: (_) @string)
+; Headers get highlighted as keywords
+(header) @keyword
 
-; Body
-(body) @string
+; Body gets highlighted as text/comment  
+(body) @comment
 
 ; Punctuation
 ":" @punctuation.delimiter
