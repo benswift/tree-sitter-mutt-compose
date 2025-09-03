@@ -3,321 +3,76 @@
   "name": "mutt_compose",
   "rules": {
     "source_file": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "headers"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "body"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "quoted_section"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        }
-      ]
-    },
-    "headers": {
-      "type": "REPEAT1",
+      "type": "REPEAT",
       "content": {
-        "type": "SYMBOL",
-        "name": "header"
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "header"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "quoted_line"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "quote_attribution"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "markdown_heading"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "markdown_list_item"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "markdown_code_fence"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "text_line"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "blank_line"
+          }
+        ]
       }
     },
     "header": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
-          "name": "name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "header_name"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": ":"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "FIELD",
-              "name": "value",
-              "content": {
-                "type": "SYMBOL",
-                "name": "header_value"
-              }
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "\n"
-        }
-      ]
-    },
-    "header_name": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "From"
-        },
-        {
-          "type": "STRING",
-          "value": "To"
-        },
-        {
-          "type": "STRING",
-          "value": "Cc"
-        },
-        {
-          "type": "STRING",
-          "value": "Bcc"
-        },
-        {
-          "type": "STRING",
-          "value": "Subject"
-        },
-        {
-          "type": "STRING",
-          "value": "Message-ID"
-        },
-        {
-          "type": "STRING",
-          "value": "Reply-To"
-        },
-        {
-          "type": "STRING",
-          "value": "In-Reply-To"
-        },
-        {
-          "type": "STRING",
-          "value": "Date"
-        },
-        {
-          "type": "STRING",
-          "value": "References"
-        },
-        {
-          "type": "STRING",
-          "value": "X-Mailer"
-        },
-        {
-          "type": "PATTERN",
-          "value": "[A-Z][A-Za-z-]*"
-        }
-      ]
-    },
-    "header_value": {
       "type": "PATTERN",
-      "value": "[^\\n]+"
+      "value": "[A-Z][-A-Za-z0-9]*: [^\\n]*\\n"
     },
-    "body": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\n"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "body_line"
-          }
-        }
-      ]
-    },
-    "body_line": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "regular_line"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "markdown_heading"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "markdown_list"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "markdown_code_block"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "markdown_link"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "markdown_emphasis"
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "\n"
-        }
-      ]
-    },
-    "regular_line": {
+    "quoted_line": {
       "type": "PATTERN",
-      "value": "[^\\n>].*"
+      "value": ">+ ?[^\\n]*\\n"
     },
-    "markdown_heading": {
-      "type": "PATTERN",
-      "value": "#{1,6}\\s+.*"
-    },
-    "markdown_list": {
-      "type": "PATTERN",
-      "value": "[\\*\\-\\+]\\s+.*"
-    },
-    "markdown_code_block": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "```"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "language_name"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "\n"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "code_line"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "```"
-        }
-      ]
-    },
-    "language_name": {
-      "type": "PATTERN",
-      "value": "[a-z]+"
-    },
-    "code_line": {
-      "type": "PATTERN",
-      "value": "[^`\\n][^\\n]*"
-    },
-    "markdown_link": {
-      "type": "PATTERN",
-      "value": "\\[[^\\]]+\\]\\([^\\)]+\\)"
-    },
-    "markdown_emphasis": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "PATTERN",
-          "value": "\\*[^*]+\\*"
-        },
-        {
-          "type": "PATTERN",
-          "value": "\\*\\*[^*]+\\*\\*"
-        },
-        {
-          "type": "PATTERN",
-          "value": "_[^_]+_"
-        },
-        {
-          "type": "PATTERN",
-          "value": "__[^_]+__"
-        }
-      ]
-    },
-    "quoted_section": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "quote_header"
-        },
-        {
-          "type": "REPEAT1",
-          "content": {
-            "type": "SYMBOL",
-            "name": "quoted_line"
-          }
-        }
-      ]
-    },
-    "quote_header": {
+    "quote_attribution": {
       "type": "PATTERN",
       "value": "On .+ wrote:\\n"
     },
-    "quoted_line": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "REPEAT1",
-          "content": {
-            "type": "STRING",
-            "value": ">"
-          }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[^\\n]*"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "\n"
-        }
-      ]
+    "markdown_heading": {
+      "type": "PATTERN",
+      "value": "#{1,6} +[^\\n]+\\n"
+    },
+    "markdown_list_item": {
+      "type": "PATTERN",
+      "value": "[-*+] +[^\\n]+\\n"
+    },
+    "markdown_code_fence": {
+      "type": "PATTERN",
+      "value": "```[^\\n]*\\n"
+    },
+    "blank_line": {
+      "type": "PATTERN",
+      "value": "\\n"
+    },
+    "text_line": {
+      "type": "PATTERN",
+      "value": "[^#>\\-*+\\n][^\\n]*\\n"
     }
   },
   "extras": [

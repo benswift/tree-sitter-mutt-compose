@@ -1,33 +1,23 @@
 [
   {
-    "type": "body",
+    "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "body_line",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "body_line",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "markdown_code_block",
+          "type": "blank_line",
           "named": true
         },
         {
-          "type": "markdown_emphasis",
+          "type": "header",
+          "named": true
+        },
+        {
+          "type": "markdown_code_fence",
           "named": true
         },
         {
@@ -35,208 +25,34 @@
           "named": true
         },
         {
-          "type": "markdown_link",
+          "type": "markdown_list_item",
           "named": true
         },
         {
-          "type": "markdown_list",
-          "named": true
-        },
-        {
-          "type": "regular_line",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "header",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "header_name",
-            "named": true
-          }
-        ]
-      },
-      "value": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "header_value",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "header_name",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "headers",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "header",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "markdown_code_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "code_line",
-          "named": true
-        },
-        {
-          "type": "language_name",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "markdown_emphasis",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "quoted_line",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "quoted_section",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "quote_header",
+          "type": "quote_attribution",
           "named": true
         },
         {
           "type": "quoted_line",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "source_file",
-    "named": true,
-    "root": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "body",
-          "named": true
         },
         {
-          "type": "headers",
-          "named": true
-        },
-        {
-          "type": "quoted_section",
+          "type": "text_line",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "\n",
-    "named": false
-  },
-  {
-    "type": ":",
-    "named": false
-  },
-  {
-    "type": ">",
-    "named": false
-  },
-  {
-    "type": "Bcc",
-    "named": false
-  },
-  {
-    "type": "Cc",
-    "named": false
-  },
-  {
-    "type": "Date",
-    "named": false
-  },
-  {
-    "type": "From",
-    "named": false
-  },
-  {
-    "type": "In-Reply-To",
-    "named": false
-  },
-  {
-    "type": "Message-ID",
-    "named": false
-  },
-  {
-    "type": "References",
-    "named": false
-  },
-  {
-    "type": "Reply-To",
-    "named": false
-  },
-  {
-    "type": "Subject",
-    "named": false
-  },
-  {
-    "type": "To",
-    "named": false
-  },
-  {
-    "type": "X-Mailer",
-    "named": false
-  },
-  {
-    "type": "```",
-    "named": false
-  },
-  {
-    "type": "code_line",
+    "type": "blank_line",
     "named": true
   },
   {
-    "type": "header_value",
+    "type": "header",
     "named": true
   },
   {
-    "type": "language_name",
+    "type": "markdown_code_fence",
     "named": true
   },
   {
@@ -244,19 +60,19 @@
     "named": true
   },
   {
-    "type": "markdown_link",
+    "type": "markdown_list_item",
     "named": true
   },
   {
-    "type": "markdown_list",
+    "type": "quote_attribution",
     "named": true
   },
   {
-    "type": "quote_header",
+    "type": "quoted_line",
     "named": true
   },
   {
-    "type": "regular_line",
+    "type": "text_line",
     "named": true
   }
 ]
