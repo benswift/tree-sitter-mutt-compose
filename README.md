@@ -12,7 +12,7 @@ The grammar parses mutt compose files which consist of:
 
 The grammar includes:
 - `queries/highlights.scm` - Syntax highlighting queries
-- `queries/injections.scm` - Optional language injection (commented out by default) for markdown in body
+- `queries/injections.scm` - Language injection for markdown syntax highlighting in email bodies
 
 The grammar correctly handles:
 - Headers only (no body)

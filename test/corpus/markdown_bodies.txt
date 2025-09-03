@@ -1,0 +1,113 @@
+==================
+Body with markdown headers
+==================
+
+
+# Main heading
+
+## Subheading
+
+Some paragraph text.
+
+---
+
+(source_file
+  (body))
+
+==================
+Body with markdown lists
+==================
+
+
+- First item
+- Second item
+  - Nested item
+  - Another nested item
+- Third item
+
+1. Numbered item
+2. Another numbered item
+
+---
+
+(source_file
+  (body))
+
+==================
+Body with markdown code blocks
+==================
+
+
+Here's some code:
+
+```python
+def hello():
+    print("world")
+```
+
+And inline `code` too.
+
+---
+
+(source_file
+  (body))
+
+==================
+Body with markdown formatting
+==================
+
+
+This is **bold** and this is *italic*.
+
+This is ***bold and italic***.
+
+> This is a blockquote
+> spanning multiple lines
+
+---
+
+(source_file
+  (body))
+
+==================
+Body with markdown links and images
+==================
+
+
+Check out [this link](https://example.com).
+
+![Alt text](image.png)
+
+[Reference link][1]
+
+[1]: https://example.com "Title"
+
+---
+
+(source_file
+  (body))
+
+==================
+Headers with markdown body (note: won't parse as expected due to test format)
+==================
+
+From: sender@example.com
+To: recipient@example.com
+Subject: Markdown formatted email
+
+# Welcome
+
+This email contains **markdown** formatting:
+
+- Lists
+- Code blocks
+- Links
+
+```bash
+echo "Hello, World!"
+```
+
+---
+
+(source_file
+  (body))
