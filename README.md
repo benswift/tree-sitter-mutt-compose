@@ -8,6 +8,12 @@ The grammar parses mutt compose files which consist of:
 - **Headers**: Email headers in the format `Key: value`
 - **Body**: The email body content, separated from headers by a blank line
 
+### Query Files
+
+The grammar includes:
+- `queries/highlights.scm` - Syntax highlighting queries
+- `queries/injections.scm` - Optional language injection (commented out by default) for markdown in body
+
 The grammar correctly handles:
 - Headers only (no body)
 - Headers with body (separated by blank line)
