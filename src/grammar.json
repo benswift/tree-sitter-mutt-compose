@@ -3,76 +3,82 @@
   "name": "mutt_compose",
   "rules": {
     "source_file": {
-      "type": "REPEAT",
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "headers"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "body"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "headers": {
+      "type": "REPEAT1",
       "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "header"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "quoted_line"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "quote_attribution"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "markdown_heading"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "markdown_list_item"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "markdown_code_fence"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "text_line"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "blank_line"
-          }
-        ]
+        "type": "SYMBOL",
+        "name": "header"
       }
     },
     "header": {
-      "type": "PATTERN",
-      "value": "[A-Z][-A-Za-z0-9]*: [^\\n]*\\n"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "PATTERN",
+            "value": "[A-Za-z][-A-Za-z0-9]*"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "value",
+              "content": {
+                "type": "PATTERN",
+                "value": "[^\\n]*"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "\n"
+        }
+      ]
     },
-    "quoted_line": {
-      "type": "PATTERN",
-      "value": ">+ ?[^\\n]*\\n"
-    },
-    "quote_attribution": {
-      "type": "PATTERN",
-      "value": "On .+ wrote:\\n"
-    },
-    "markdown_heading": {
-      "type": "PATTERN",
-      "value": "#{1,6} +[^\\n]+\\n"
-    },
-    "markdown_list_item": {
-      "type": "PATTERN",
-      "value": "[-*+] +[^\\n]+\\n"
-    },
-    "markdown_code_fence": {
-      "type": "PATTERN",
-      "value": "```[^\\n]*\\n"
-    },
-    "blank_line": {
-      "type": "PATTERN",
-      "value": "\\n"
-    },
-    "text_line": {
-      "type": "PATTERN",
-      "value": "[^#>\\-*+\\n][^\\n]*\\n"
+    "body": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "\n"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[\\s\\S]*"
+        }
+      ]
     }
   },
   "extras": [

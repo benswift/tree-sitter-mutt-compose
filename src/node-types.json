@@ -1,78 +1,55 @@
 [
   {
-    "type": "source_file",
+    "type": "body",
     "named": true,
-    "root": true,
+    "fields": {}
+  },
+  {
+    "type": "header",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "headers",
+    "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "blank_line",
-          "named": true
-        },
-        {
           "type": "header",
-          "named": true
-        },
-        {
-          "type": "markdown_code_fence",
-          "named": true
-        },
-        {
-          "type": "markdown_heading",
-          "named": true
-        },
-        {
-          "type": "markdown_list_item",
-          "named": true
-        },
-        {
-          "type": "quote_attribution",
-          "named": true
-        },
-        {
-          "type": "quoted_line",
-          "named": true
-        },
-        {
-          "type": "text_line",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "blank_line",
-    "named": true
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        },
+        {
+          "type": "headers",
+          "named": true
+        }
+      ]
+    }
   },
   {
-    "type": "header",
-    "named": true
+    "type": "\n",
+    "named": false
   },
   {
-    "type": "markdown_code_fence",
-    "named": true
-  },
-  {
-    "type": "markdown_heading",
-    "named": true
-  },
-  {
-    "type": "markdown_list_item",
-    "named": true
-  },
-  {
-    "type": "quote_attribution",
-    "named": true
-  },
-  {
-    "type": "quoted_line",
-    "named": true
-  },
-  {
-    "type": "text_line",
-    "named": true
+    "type": ":",
+    "named": false
   }
 ]

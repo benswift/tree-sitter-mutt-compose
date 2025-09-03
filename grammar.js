@@ -2,41 +2,26 @@ module.exports = grammar({
   name: 'mutt_compose',
 
   rules: {
-    source_file: $ => repeat(
-      choice(
-        $.header,
-        $.quoted_line,
-        $.quote_attribution,  
-        $.markdown_heading,
-        $.markdown_list_item,
-        $.markdown_code_fence,
-        $.text_line,
-        $.blank_line
-      )
+    source_file: $ => seq(
+      $.headers,
+      optional($.body)
     ),
 
-    // Headers must have the exact format: Name: value
-    header: $ => /[A-Z][-A-Za-z0-9]*: [^\n]*\n/,
+    // Headers section - everything until first blank line
+    headers: $ => repeat1($.header),
 
-    // Quoted lines 
-    quoted_line: $ => />+ ?[^\n]*\n/,
+    // Individual header
+    header: $ => seq(
+      field('key', /[A-Za-z][-A-Za-z0-9]*/),
+      ':',
+      optional(field('value', /[^\n]*/)),
+      '\n'
+    ),
 
-    // Quote attribution
-    quote_attribution: $ => /On .+ wrote:\n/,
-
-    // Markdown heading
-    markdown_heading: $ => /#{1,6} +[^\n]+\n/,
-
-    // Markdown list
-    markdown_list_item: $ => /[-*+] +[^\n]+\n/,
-
-    // Code fence
-    markdown_code_fence: $ => /```[^\n]*\n/,
-
-    // Blank line
-    blank_line: $ => /\n/,
-
-    // Any other text (must not start with special chars)
-    text_line: $ => /[^#>\-*+\n][^\n]*\n/
+    // Body is everything after the blank line separating headers
+    body: $ => seq(
+      '\n',  // blank line separator
+      /[\s\S]*/  // everything else
+    )
   }
 });
