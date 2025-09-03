@@ -1,8 +1,8 @@
 # tree-sitter-mutt-compose
 
-A tree-sitter grammar for mutt compose files/buffers, with support for the Zed editor.
+A tree-sitter grammar for mutt compose files/buffers.
 
-## Grammar structure
+## Features
 
 The grammar parses mutt compose files which consist of:
 - **Headers**: Email headers in the format `Key: value`
@@ -14,31 +14,54 @@ The grammar correctly handles:
 - Body only (starting with blank line)
 - Empty files
 
+## Installation
+
+### Cargo
+
+```bash
+cargo add tree-sitter-mutt-compose
+```
+
+### Source
+
+```bash
+git clone https://github.com/benswift/tree-sitter-mutt-compose
+cd tree-sitter-mutt-compose
+tree-sitter generate
+```
+
 ## Building
 
 ```bash
-tree-sitter generate
-tree-sitter test
-cargo build
+tree-sitter generate  # Generate parser from grammar.js
+tree-sitter test      # Run tests
+cargo build           # Build Rust bindings
 ```
 
-## Zed integration
+## Usage
 
-This grammar is designed to work with the Zed editor. The repository includes:
-- Zed extension configuration (`extension.toml`)
-- Language configuration (`languages/mutt-compose/config.toml`)
-- Syntax highlighting queries (`languages/mutt-compose/highlights.scm`)
+This grammar can be used with any editor that supports tree-sitter:
+- Neovim (via nvim-treesitter)
+- Helix
+- Zed (via extension)
+- Emacs (via tree-sitter modes)
 
-To use in Zed as a local extension during development:
-1. Clone this repository
-2. In Zed, open the extensions directory
-3. Create a symlink to this repository in the extensions directory
+## Examples
 
-## Testing note
+See the `examples/` directory for sample mutt compose files that demonstrate the grammar's capabilities.
 
-Due to how tree-sitter test corpus files are formatted (with a blank line after the test name), tests for "headers only" files will appear to fail because the parser sees them as starting with a newline (which makes them body-only files). This is a limitation of the test format, not the grammar itself.
+## Testing
 
-When using this grammar on actual mutt compose files, it will work correctly:
-- Files starting with headers will be parsed as headers
-- Files starting with a blank line will be parsed as body-only
-- Headers followed by a blank line and body will be parsed correctly
+The grammar includes a comprehensive test suite in `test/corpus/`. Run tests with:
+
+```bash
+tree-sitter test
+```
+
+### Testing note
+
+Due to how tree-sitter test corpus files are formatted (with a blank line after the test name), tests for "headers only" files will appear to start with a newline. This is a limitation of the test format, not the grammar itself. The grammar works correctly on actual files.
+
+## License
+
+MIT

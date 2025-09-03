@@ -1,8 +1,0 @@
-[extension]
-id = "mutt-compose"
-name = "Mutt Compose"
-version = "0.1.0"
-schema_version = 1
-authors = ["Ben Swift <ben@benswift.me>"]
-description = "Language support for mutt compose files"
-repository = "https://github.com/benswift/tree-sitter-mutt-compose"
