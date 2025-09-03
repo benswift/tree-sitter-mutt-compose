@@ -46,6 +46,67 @@ This grammar can be used with any editor that supports tree-sitter:
 - Zed (via extension)
 - Emacs (via tree-sitter modes)
 
+### Creating a Zed Extension
+
+To use this grammar in Zed, create a separate extension repository with the following structure:
+
+```
+zed-mutt-compose/
+├── extension.toml
+├── languages/
+│   └── mutt-compose/
+│       ├── config.toml
+│       └── highlights.scm
+└── README.md
+```
+
+**extension.toml:**
+```toml
+id = "mutt-compose"
+name = "Mutt Compose"
+description = "Language support for mutt compose files"
+version = "0.1.0"
+schema_version = 1
+authors = ["Your Name <your@email.com>"]
+repository = "https://github.com/yourusername/zed-mutt-compose"
+
+[grammars.mutt_compose]
+repository = "https://github.com/benswift/tree-sitter-mutt-compose"
+commit = "main"
+```
+
+**languages/mutt-compose/config.toml:**
+```toml
+name = "Mutt Compose"
+grammar = "mutt_compose"
+path_suffixes = ["mutt", "mutt-compose"]
+line_comments = ["# "]
+```
+
+**languages/mutt-compose/highlights.scm:**
+```scheme
+; Email headers
+(header
+  key: (_) @keyword
+  value: (_) @string)
+
+; Common email header fields get special highlighting
+(header
+  key: (_) @keyword.special
+  (#match? @keyword.special "^(From|To|Cc|Bcc|Subject|Reply-To|Date)$"))
+
+; X- headers (custom headers)
+(header
+  key: (_) @property
+  (#match? @property "^X-"))
+
+; Body content
+(body) @text
+
+; Punctuation
+":" @punctuation.delimiter
+```
+
 ## Examples
 
 See the `examples/` directory for sample mutt compose files that demonstrate the grammar's capabilities.
