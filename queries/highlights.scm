@@ -1,8 +1,8 @@
-; Headers get highlighted as keywords
-(header) @keyword
+; Headers get highlighted as properties (field names)
+(header) @property
 
-; Body gets highlighted as text/comment  
-(body) @comment
+; Body gets highlighted as regular text
+(body) @string
 
 ; Punctuation
 ":" @punctuation.delimiter
