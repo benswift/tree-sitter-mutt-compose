@@ -18,10 +18,14 @@ module.exports = grammar({
     ),
 
     header: $ => seq(
-      field('key', token(/[A-Za-z][-A-Za-z0-9]*/)),
-      token(':'),
-      field('value', optional(/[^\n]*/))
+      field('key', $.header_key),
+      ':',
+      field('value', optional($.header_value))
     ),
+
+    header_key: $ => /[A-Za-z][-A-Za-z0-9]*/,
+    
+    header_value: $ => /[^\n]+/,
 
     body: $ => /[\s\S]+/
   }

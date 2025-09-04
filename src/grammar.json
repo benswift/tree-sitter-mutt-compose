@@ -117,19 +117,13 @@
           "type": "FIELD",
           "name": "key",
           "content": {
-            "type": "TOKEN",
-            "content": {
-              "type": "PATTERN",
-              "value": "[A-Za-z][-A-Za-z0-9]*"
-            }
+            "type": "SYMBOL",
+            "name": "header_key"
           }
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": ":"
-          }
+          "type": "STRING",
+          "value": ":"
         },
         {
           "type": "FIELD",
@@ -138,8 +132,8 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "PATTERN",
-                "value": "[^\\n]*"
+                "type": "SYMBOL",
+                "name": "header_value"
               },
               {
                 "type": "BLANK"
@@ -148,6 +142,14 @@
           }
         }
       ]
+    },
+    "header_key": {
+      "type": "PATTERN",
+      "value": "[A-Za-z][-A-Za-z0-9]*"
+    },
+    "header_value": {
+      "type": "PATTERN",
+      "value": "[^\\n]+"
     },
     "body": {
       "type": "PATTERN",
