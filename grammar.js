@@ -4,27 +4,22 @@ module.exports = grammar({
   extras: $ => [],
 
   rules: {
-    source_file: $ => choice(
-      seq(),  // Empty file
-      $._content
-    ),
+    source_file: $ => optional($._content),
 
     _content: $ => choice(
       // Headers only, possibly with trailing newline
-      seq($._header_line, repeat(seq('\n', $._header_line)), optional('\n')),
+      seq($.header, repeat(seq('\n', $.header)), optional('\n')),
       // Headers with body separated by blank line
-      seq($._header_line, repeat(seq('\n', $._header_line)), '\n', '\n', $.body),
+      seq($.header, repeat(seq('\n', $.header)), '\n', '\n', $.body),
       // Just body (starting with blank line)
       seq('\n', $.body),
       // Just a blank line
       '\n'
     ),
 
-    _header_line: $ => $.header,
-
     header: $ => seq(
-      field('key', /[A-Za-z][-A-Za-z0-9]*/),
-      ':',
+      field('key', token(/[A-Za-z][-A-Za-z0-9]*/)),
+      token(':'),
       field('value', optional(/[^\n]*/))
     ),
 
