@@ -1,7 +1,7 @@
 ==================
 Body with markdown headers
 ==================
-
+Subject: Test with markdown headers
 
 # Main heading
 
@@ -12,12 +12,15 @@ Some paragraph text.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Body with markdown lists
 ==================
-
+Subject: Test with markdown lists
 
 - First item
 - Second item
@@ -31,12 +34,15 @@ Body with markdown lists
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Body with markdown code blocks
 ==================
-
+Subject: Test with code blocks
 
 Here's some code:
 
@@ -50,12 +56,15 @@ And inline `code` too.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Body with markdown formatting
 ==================
-
+Subject: Test with markdown formatting
 
 This is **bold** and this is *italic*.
 
@@ -67,12 +76,15 @@ This is ***bold and italic***.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Body with markdown links and images
 ==================
-
+Subject: Test with links and images
 
 Check out [this link](https://example.com).
 
@@ -85,12 +97,14 @@ Check out [this link](https://example.com).
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
-Headers with markdown body (note: won't parse as expected due to test format)
+Headers with markdown body
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Markdown formatted email
@@ -110,4 +124,13 @@ echo "Hello, World!"
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))

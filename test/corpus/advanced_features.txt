@@ -1,7 +1,6 @@
 ==================
 Attachment headers
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Files attached
@@ -13,12 +12,26 @@ Please find the attached files.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Multiple recipients
 ==================
-
 From: sender@example.com
 To: user1@example.com, user2@example.com, user3@example.com
 Cc: team@example.com
@@ -30,12 +43,26 @@ Hello everyone!
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 MIME headers
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Test
@@ -48,12 +75,29 @@ Message with MIME headers.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Threading headers
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Re: Previous topic
@@ -66,12 +110,32 @@ Continuing the thread...
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 PGP signed message
 ==================
-
+From: sender@example.com
+To: recipient@example.com
+Subject: Signed message
 
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
@@ -91,12 +155,23 @@ MoreSignatureData==
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 PGP encrypted message
 ==================
-
+From: sender@example.com
+To: recipient@example.com
+Subject: Encrypted message
 
 -----BEGIN PGP MESSAGE-----
 
@@ -109,12 +184,20 @@ MoreEncryptedData1234567890abcdefghijklmnopqrstuvwxyz
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Mixed PGP and regular content
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Encrypted content below
@@ -132,29 +215,20 @@ Thanks!
 ---
 
 (source_file
-  (body))
-
-==================
-Header with line continuation (note: not supported by current grammar)
-==================
-
-From: sender@example.com
-To: recipient@example.com
-Subject: This is a very long subject that would normally
- continue on the next line with a space or tab prefix
- to indicate continuation
-
-Message body here.
-
----
-
-(source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Custom X-headers
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Test
@@ -167,12 +241,29 @@ Body text.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Draft headers
 ==================
-
 From: sender@example.com
 To: 
 Subject: [DRAFT] Unfinished email
@@ -184,12 +275,26 @@ TODO: Finish this email later.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Complete email with date header
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Meeting tomorrow
@@ -200,12 +305,23 @@ Let's meet at 2pm.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Email with various date formats
 ==================
-
 From: sender@example.com
 To: recipient@example.com
 Subject: Date format test
@@ -218,4 +334,22 @@ Testing different date formats and timezones.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))

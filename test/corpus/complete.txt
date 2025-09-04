@@ -1,36 +1,24 @@
 ==================
-Empty file
+Simple complete message
 ==================
+From: sender@example.com
 
----
-
-(source_file)
-
-==================
-Just a blank line
-==================
-
-
----
-
-(source_file)
-
-==================
-Body only (with leading blank)
-==================
-
-
-This is just body text.
+This is the body text.
 
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
-Multiline body
+Multiple headers with body
 ==================
-
+From: sender@example.com
+To: recipient@example.com
+Subject: Test message
 
 This is the first paragraph.
 
@@ -42,12 +30,21 @@ Final paragraph.
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
 
 ==================
 Body with special characters
 ==================
-
+Subject: Special chars test
 
 Body with special chars: !@#$%^&*()
 Unicode: ™ © ® → ← ↑ ↓
@@ -55,4 +52,7 @@ Unicode: ™ © ® → ← ↑ ↓
 ---
 
 (source_file
+  (header
+    key: (header_key)
+    value: (header_value))
   (body))
