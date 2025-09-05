@@ -11,7 +11,8 @@ dependencies: []
 ## Description
 
 The grammar is currently working pretty well, but there are a couple of things
-which could be better:
+which could be better. In each case, come up with a fix and add a new test to
+check it.
 
 ### Empty header values
 
