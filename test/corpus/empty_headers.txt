@@ -1,0 +1,34 @@
+==================
+Empty header values
+==================
+From: Me <me@example.com>
+To: Oldmate <oldmate@example.com>
+Cc:
+Bcc:
+Subject: Re: Setup today
+Reply-To:
+
+Message body goes here.
+
+---
+
+(source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (body))

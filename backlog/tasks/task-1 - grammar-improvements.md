@@ -1,7 +1,7 @@
 ---
 id: task-1
 title: grammar improvements
-status: To Do
+status: Done
 assignee: []
 created_date: "2025-09-05 00:03"
 labels: []
@@ -13,6 +13,16 @@ dependencies: []
 The grammar is currently working pretty well, but there are a couple of things
 which could be better. In each case, come up with a fix and add a new test to
 check it.
+
+## Implementation Notes
+
+All requested improvements have been successfully implemented:
+
+1. **Empty header values**: Fixed by changing the header_value regex from `/[^\n]+/` to `/[^\n]*/` to allow empty values. Headers like `Cc:` and `Bcc:` with no values are now properly parsed with the header key highlighted.
+
+2. **RFC 2822 Header folding**: Added support for multi-line headers as per RFC 2822. Header values can now span multiple lines when continuation lines start with whitespace (space or tab). The regex `/[^\n]*(\n[ \t]+[^\n]*)*/` properly handles folded headers.
+
+3. **Reply highlighting approach**: After considering RFC 3676's complex quote handling rules, decided to keep the body as a simple text blob. Quote highlighting (for lines starting with `>`) should be handled by the editor's syntax highlighting queries rather than in the parser itself. This keeps the grammar simple and places visual distinction logic where it belongs - in the editor extension.
 
 ### Empty header values
 

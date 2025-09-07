@@ -1,0 +1,99 @@
+==================
+Simple folded header
+==================
+Subject: This
+ is a test
+
+Body text here.
+
+---
+
+(source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Multiple folded headers
+==================
+To: alice@example.com,
+ bob@example.com,
+ charlie@example.com
+Subject: This is a very long subject line that
+ continues on the next line
+ and even wraps to a third line
+
+Message body.
+
+---
+
+(source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Mixed folded and non-folded headers
+==================
+From: sender@example.com
+To: recipient1@example.com,
+ recipient2@example.com
+Subject: Test
+Cc: 
+
+Body content.
+
+---
+
+(source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Deep indentation in folded headers
+==================
+References: <msg1@example.com>
+     <msg2@example.com>
+     <msg3@example.com>
+
+Email body.
+
+---
+
+(source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Tab-indented continuation
+==================
+Subject: Using tabs
+	for continuation
+
+Content here.
+
+---
+
+(source_file
+  (header
+    key: (header_key)
+    value: (header_value))
+  (body))
