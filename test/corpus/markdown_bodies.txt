@@ -12,8 +12,7 @@ Some paragraph text.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -34,8 +33,7 @@ Subject: Test with markdown lists
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -56,8 +54,7 @@ And inline `code` too.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -76,8 +73,7 @@ This is ***bold and italic***.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -97,8 +93,7 @@ Check out [this link](https://example.com).
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -124,13 +119,10 @@ echo "Hello, World!"
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))

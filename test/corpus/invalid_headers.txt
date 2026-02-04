@@ -1,0 +1,100 @@
+==================
+Invalid: header name starting with digit
+==================
+1Invalid: value
+
+Body.
+
+---
+
+(source_file
+  (ERROR
+    (UNEXPECTED '1'))
+  (custom_header
+    (header_key)
+    (header_value))
+  (body))
+
+==================
+Invalid: header name starting with hyphen
+==================
+-Invalid: value
+
+Body.
+
+---
+
+(source_file
+  (ERROR
+    (UNEXPECTED '-'))
+  (custom_header
+    (header_key)
+    (header_value))
+  (body))
+
+==================
+Invalid: space before colon
+==================
+Subject : value
+
+Body.
+
+---
+
+(source_file
+  (subject_header
+    (ERROR
+      (UNEXPECTED ' '))
+    (header_value))
+  (body))
+
+==================
+Invalid: no colon
+==================
+NotAHeader
+
+Body.
+
+---
+
+(source_file
+  (ERROR
+    (header_key)
+    (header_key)
+    (UNEXPECTED '.')))
+
+==================
+Invalid: header name with space
+==================
+Invalid Header: value
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    (header_key)
+    (ERROR
+      (UNEXPECTED ' ')
+      (header_key))
+    (header_value))
+  (body))
+
+==================
+Invalid: header name with underscore
+==================
+Invalid_Header: value
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    (header_key)
+    (ERROR
+      (UNEXPECTED '_')
+      (header_key))
+    (header_value))
+  (body))

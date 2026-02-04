@@ -19,28 +19,20 @@ On Fri, 05 Sep 2025 at 08:10 AM +1000, Oldmate wrote:
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (cc_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (bcc_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (message_id_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (reply_to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (in_reply_to_header
     value: (header_value))
   (body))

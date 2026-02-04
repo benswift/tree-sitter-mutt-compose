@@ -1,6 +1,150 @@
 [
   {
-    "type": "header",
+    "type": "attach_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "bcc_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "cc_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "content_description_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "content_disposition_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "content_language_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "content_length_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "content_transfer_encoding_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "content_type_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "custom_header",
     "named": true,
     "fields": {
       "key": {
@@ -26,6 +170,310 @@
     }
   },
   {
+    "type": "date_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "expires_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "fcc_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "followup_to_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "from_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "in_reply_to_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "list_post_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "list_subscribe_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "list_unsubscribe_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "mail_followup_to_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "message_id_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "mime_version_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "newsgroups_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "organization_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "received_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "references_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reply_to_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "return_path_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "sender_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "source_file",
     "named": true,
     "root": true,
@@ -35,14 +483,306 @@
       "required": false,
       "types": [
         {
+          "type": "attach_header",
+          "named": true
+        },
+        {
+          "type": "bcc_header",
+          "named": true
+        },
+        {
           "type": "body",
           "named": true
         },
         {
-          "type": "header",
+          "type": "cc_header",
+          "named": true
+        },
+        {
+          "type": "content_description_header",
+          "named": true
+        },
+        {
+          "type": "content_disposition_header",
+          "named": true
+        },
+        {
+          "type": "content_language_header",
+          "named": true
+        },
+        {
+          "type": "content_length_header",
+          "named": true
+        },
+        {
+          "type": "content_transfer_encoding_header",
+          "named": true
+        },
+        {
+          "type": "content_type_header",
+          "named": true
+        },
+        {
+          "type": "custom_header",
+          "named": true
+        },
+        {
+          "type": "date_header",
+          "named": true
+        },
+        {
+          "type": "expires_header",
+          "named": true
+        },
+        {
+          "type": "fcc_header",
+          "named": true
+        },
+        {
+          "type": "followup_to_header",
+          "named": true
+        },
+        {
+          "type": "from_header",
+          "named": true
+        },
+        {
+          "type": "in_reply_to_header",
+          "named": true
+        },
+        {
+          "type": "list_post_header",
+          "named": true
+        },
+        {
+          "type": "list_subscribe_header",
+          "named": true
+        },
+        {
+          "type": "list_unsubscribe_header",
+          "named": true
+        },
+        {
+          "type": "mail_followup_to_header",
+          "named": true
+        },
+        {
+          "type": "message_id_header",
+          "named": true
+        },
+        {
+          "type": "mime_version_header",
+          "named": true
+        },
+        {
+          "type": "newsgroups_header",
+          "named": true
+        },
+        {
+          "type": "organization_header",
+          "named": true
+        },
+        {
+          "type": "received_header",
+          "named": true
+        },
+        {
+          "type": "references_header",
+          "named": true
+        },
+        {
+          "type": "reply_to_header",
+          "named": true
+        },
+        {
+          "type": "return_path_header",
+          "named": true
+        },
+        {
+          "type": "sender_header",
+          "named": true
+        },
+        {
+          "type": "status_header",
+          "named": true
+        },
+        {
+          "type": "subject_header",
+          "named": true
+        },
+        {
+          "type": "supersedes_header",
+          "named": true
+        },
+        {
+          "type": "to_header",
+          "named": true
+        },
+        {
+          "type": "x_comment_to_header",
+          "named": true
+        },
+        {
+          "type": "x_label_header",
+          "named": true
+        },
+        {
+          "type": "x_original_to_header",
+          "named": true
+        },
+        {
+          "type": "x_status_header",
+          "named": true
+        },
+        {
+          "type": "xref_header",
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "status_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "subject_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "supersedes_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "to_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "x_comment_to_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "x_label_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "x_original_to_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "x_status_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "xref_header",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "header_value",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -51,6 +791,154 @@
   },
   {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "Attach",
+    "named": false
+  },
+  {
+    "type": "Bcc",
+    "named": false
+  },
+  {
+    "type": "Cc",
+    "named": false
+  },
+  {
+    "type": "Content-Description",
+    "named": false
+  },
+  {
+    "type": "Content-Disposition",
+    "named": false
+  },
+  {
+    "type": "Content-Language",
+    "named": false
+  },
+  {
+    "type": "Content-Length",
+    "named": false
+  },
+  {
+    "type": "Content-Transfer-Encoding",
+    "named": false
+  },
+  {
+    "type": "Content-Type",
+    "named": false
+  },
+  {
+    "type": "Date",
+    "named": false
+  },
+  {
+    "type": "Expires",
+    "named": false
+  },
+  {
+    "type": "Fcc",
+    "named": false
+  },
+  {
+    "type": "Followup-To",
+    "named": false
+  },
+  {
+    "type": "From",
+    "named": false
+  },
+  {
+    "type": "In-Reply-To",
+    "named": false
+  },
+  {
+    "type": "List-Post",
+    "named": false
+  },
+  {
+    "type": "List-Subscribe",
+    "named": false
+  },
+  {
+    "type": "List-Unsubscribe",
+    "named": false
+  },
+  {
+    "type": "MIME-Version",
+    "named": false
+  },
+  {
+    "type": "Mail-Followup-To",
+    "named": false
+  },
+  {
+    "type": "Message-ID",
+    "named": false
+  },
+  {
+    "type": "Newsgroups",
+    "named": false
+  },
+  {
+    "type": "Organization",
+    "named": false
+  },
+  {
+    "type": "Received",
+    "named": false
+  },
+  {
+    "type": "References",
+    "named": false
+  },
+  {
+    "type": "Reply-To",
+    "named": false
+  },
+  {
+    "type": "Return-Path",
+    "named": false
+  },
+  {
+    "type": "Sender",
+    "named": false
+  },
+  {
+    "type": "Status",
+    "named": false
+  },
+  {
+    "type": "Subject",
+    "named": false
+  },
+  {
+    "type": "Supersedes",
+    "named": false
+  },
+  {
+    "type": "To",
+    "named": false
+  },
+  {
+    "type": "X-Comment-To",
+    "named": false
+  },
+  {
+    "type": "X-Label",
+    "named": false
+  },
+  {
+    "type": "X-Original-To",
+    "named": false
+  },
+  {
+    "type": "X-Status",
+    "named": false
+  },
+  {
+    "type": "Xref",
     "named": false
   },
   {

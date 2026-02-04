@@ -8,8 +8,7 @@ This is the body text.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
   (body))
 
@@ -30,14 +29,11 @@ Final paragraph.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -52,7 +48,6 @@ Unicode: ™ © ® → ← ↑ ↓
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))

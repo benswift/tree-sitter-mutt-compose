@@ -13,22 +13,16 @@ Message body goes here.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (cc_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (bcc_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (reply_to_header
     value: (header_value))
   (body))

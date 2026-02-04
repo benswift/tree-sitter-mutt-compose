@@ -1,0 +1,162 @@
+==================
+RFC 5322: field name with hyphens
+==================
+Content-Type: text/plain
+X-My-Custom-Header: value
+
+Body.
+
+---
+
+(source_file
+  (content_type_header
+    value: (header_value))
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: field name with digits
+==================
+Content-MD5: abc123
+X-Priority-2: high
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: empty header value is valid
+==================
+Cc:
+Bcc:
+Subject: Test
+
+Body.
+
+---
+
+(source_file
+  (cc_header
+    value: (header_value))
+  (bcc_header
+    value: (header_value))
+  (subject_header
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: folding with single space
+==================
+Subject: Line one
+ line two
+
+Body.
+
+---
+
+(source_file
+  (subject_header
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: folding with tab
+==================
+Subject: Line one
+	line two
+
+Body.
+
+---
+
+(source_file
+  (subject_header
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: folding with multiple spaces
+==================
+To: alice@example.com,
+    bob@example.com,
+    charlie@example.com
+
+Body.
+
+---
+
+(source_file
+  (to_header
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: deeply nested folding
+==================
+References: <msg1@example.com>
+ <msg2@example.com>
+ <msg3@example.com>
+ <msg4@example.com>
+ <msg5@example.com>
+
+Body.
+
+---
+
+(source_file
+  (references_header
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: header value with special characters
+==================
+Subject: Test with special chars: !@#$%^&*()[]{}|;',.<>?
+
+Body.
+
+---
+
+(source_file
+  (subject_header
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: header value with colon
+==================
+Subject: Re: Your message: the one from yesterday
+
+Body.
+
+---
+
+(source_file
+  (subject_header
+    value: (header_value))
+  (body))
+
+==================
+RFC 5322: multiple colons in value
+==================
+Subject: Time: 10:30:45 AM
+
+Body.
+
+---
+
+(source_file
+  (subject_header
+    value: (header_value))
+  (body))

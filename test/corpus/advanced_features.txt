@@ -12,20 +12,15 @@ Please find the attached files.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (attach_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (attach_header
     value: (header_value))
   (body))
 
@@ -43,20 +38,15 @@ Hello everyone!
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (cc_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (bcc_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -75,23 +65,17 @@ Message with MIME headers.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (content_type_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (content_transfer_encoding_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (mime_version_header
     value: (header_value))
   (body))
 
@@ -110,23 +94,17 @@ Continuing the thread...
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (in_reply_to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (references_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (message_id_header
     value: (header_value))
   (body))
 
@@ -155,14 +133,11 @@ MoreSignatureData==
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -184,14 +159,11 @@ MoreEncryptedData1234567890abcdefghijklmnopqrstuvwxyz
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -215,14 +187,11 @@ Thanks!
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -241,22 +210,19 @@ Body text.
 ---
 
 (source_file
-  (header
+  (from_header
+    value: (header_value))
+  (to_header
+    value: (header_value))
+  (subject_header
+    value: (header_value))
+  (custom_header
     key: (header_key)
     value: (header_value))
-  (header
+  (custom_header
     key: (header_key)
     value: (header_value))
-  (header
-    key: (header_key)
-    value: (header_value))
-  (header
-    key: (header_key)
-    value: (header_value))
-  (header
-    key: (header_key)
-    value: (header_value))
-  (header
+  (custom_header
     key: (header_key)
     value: (header_value))
   (body))
@@ -265,30 +231,25 @@ Body text.
 Draft headers
 ==================
 From: sender@example.com
-To: 
+To:
 Subject: [DRAFT] Unfinished email
-Date: 
-Reply-To: 
+Date:
+Reply-To:
 
 TODO: Finish this email later.
 
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (date_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (reply_to_header
     value: (header_value))
   (body))
 
@@ -305,17 +266,13 @@ Let's meet at 2pm.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (date_header
     value: (header_value))
   (body))
 
@@ -334,22 +291,16 @@ Testing different date formats and timezones.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (date_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (message_id_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (reply_to_header
     value: (header_value))
   (body))

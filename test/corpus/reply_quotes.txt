@@ -11,8 +11,7 @@ This is my reply.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -30,8 +29,7 @@ My response here.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -54,8 +52,7 @@ That's my view.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -75,8 +72,7 @@ My reply starts here.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -100,8 +96,7 @@ Answer 3.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -126,14 +121,11 @@ Agreed, that's the best part.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -151,8 +143,7 @@ Subject: Re: Formatting test
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -162,9 +153,9 @@ Quote with markdown formatting
 Subject: Re: Markdown message
 
 > ## Original heading
-> 
+>
 > The original message had **bold** text.
-> 
+>
 > - And lists
 > - Like this
 
@@ -175,8 +166,7 @@ My reply also uses markdown:
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -192,14 +182,13 @@ My response.
 Best regards,
 John
 
--- 
+--
 John Doe
 john@example.com
 
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))

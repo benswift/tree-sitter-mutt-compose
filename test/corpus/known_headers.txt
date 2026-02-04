@@ -1,0 +1,489 @@
+==================
+Address headers: From
+==================
+From: alice@example.com
+
+Body.
+
+---
+
+(source_file
+  (from_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: To
+==================
+To: bob@example.com
+
+Body.
+
+---
+
+(source_file
+  (to_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: Cc
+==================
+Cc: charlie@example.com
+
+Body.
+
+---
+
+(source_file
+  (cc_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: Bcc
+==================
+Bcc: secret@example.com
+
+Body.
+
+---
+
+(source_file
+  (bcc_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: Sender
+==================
+Sender: secretary@example.com
+
+Body.
+
+---
+
+(source_file
+  (sender_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: Reply-To
+==================
+Reply-To: replies@example.com
+
+Body.
+
+---
+
+(source_file
+  (reply_to_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: Return-Path
+==================
+Return-Path: <bounce@example.com>
+
+Body.
+
+---
+
+(source_file
+  (return_path_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: Mail-Followup-To
+==================
+Mail-Followup-To: list@example.com
+
+Body.
+
+---
+
+(source_file
+  (mail_followup_to_header
+    value: (header_value))
+  (body))
+
+==================
+Address headers: X-Original-To
+==================
+X-Original-To: original@example.com
+
+Body.
+
+---
+
+(source_file
+  (x_original_to_header
+    value: (header_value))
+  (body))
+
+==================
+Identification: Subject
+==================
+Subject: Important message
+
+Body.
+
+---
+
+(source_file
+  (subject_header
+    value: (header_value))
+  (body))
+
+==================
+Identification: Message-ID
+==================
+Message-ID: <unique123@example.com>
+
+Body.
+
+---
+
+(source_file
+  (message_id_header
+    value: (header_value))
+  (body))
+
+==================
+Identification: In-Reply-To
+==================
+In-Reply-To: <parent@example.com>
+
+Body.
+
+---
+
+(source_file
+  (in_reply_to_header
+    value: (header_value))
+  (body))
+
+==================
+Identification: References
+==================
+References: <thread@example.com>
+
+Body.
+
+---
+
+(source_file
+  (references_header
+    value: (header_value))
+  (body))
+
+==================
+Date header
+==================
+Date: Mon, 1 Jan 2024 12:00:00 +0000
+
+Body.
+
+---
+
+(source_file
+  (date_header
+    value: (header_value))
+  (body))
+
+==================
+MIME: Content-Type
+==================
+Content-Type: text/plain; charset=utf-8
+
+Body.
+
+---
+
+(source_file
+  (content_type_header
+    value: (header_value))
+  (body))
+
+==================
+MIME: Content-Transfer-Encoding
+==================
+Content-Transfer-Encoding: base64
+
+Body.
+
+---
+
+(source_file
+  (content_transfer_encoding_header
+    value: (header_value))
+  (body))
+
+==================
+MIME: Content-Disposition
+==================
+Content-Disposition: attachment; filename="doc.pdf"
+
+Body.
+
+---
+
+(source_file
+  (content_disposition_header
+    value: (header_value))
+  (body))
+
+==================
+MIME: Content-Description
+==================
+Content-Description: A PDF document
+
+Body.
+
+---
+
+(source_file
+  (content_description_header
+    value: (header_value))
+  (body))
+
+==================
+MIME: Content-Language
+==================
+Content-Language: en-AU
+
+Body.
+
+---
+
+(source_file
+  (content_language_header
+    value: (header_value))
+  (body))
+
+==================
+MIME: Content-Length
+==================
+Content-Length: 12345
+
+Body.
+
+---
+
+(source_file
+  (content_length_header
+    value: (header_value))
+  (body))
+
+==================
+MIME: MIME-Version
+==================
+MIME-Version: 1.0
+
+Body.
+
+---
+
+(source_file
+  (mime_version_header
+    value: (header_value))
+  (body))
+
+==================
+Mailing list: List-Post
+==================
+List-Post: <mailto:list@example.com>
+
+Body.
+
+---
+
+(source_file
+  (list_post_header
+    value: (header_value))
+  (body))
+
+==================
+Mailing list: List-Subscribe
+==================
+List-Subscribe: <mailto:list-subscribe@example.com>
+
+Body.
+
+---
+
+(source_file
+  (list_subscribe_header
+    value: (header_value))
+  (body))
+
+==================
+Mailing list: List-Unsubscribe
+==================
+List-Unsubscribe: <mailto:list-unsubscribe@example.com>
+
+Body.
+
+---
+
+(source_file
+  (list_unsubscribe_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Organization
+==================
+Organization: Example Corp
+
+Body.
+
+---
+
+(source_file
+  (organization_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Newsgroups
+==================
+Newsgroups: comp.lang.c
+
+Body.
+
+---
+
+(source_file
+  (newsgroups_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Followup-To
+==================
+Followup-To: comp.lang.c.moderated
+
+Body.
+
+---
+
+(source_file
+  (followup_to_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Expires
+==================
+Expires: Fri, 31 Dec 2024 23:59:59 +0000
+
+Body.
+
+---
+
+(source_file
+  (expires_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Received
+==================
+Received: from mail.example.com by smtp.example.org
+
+Body.
+
+---
+
+(source_file
+  (received_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Status
+==================
+Status: RO
+
+Body.
+
+---
+
+(source_file
+  (status_header
+    value: (header_value))
+  (body))
+
+==================
+Other: X-Status
+==================
+X-Status: A
+
+Body.
+
+---
+
+(source_file
+  (x_status_header
+    value: (header_value))
+  (body))
+
+==================
+Other: X-Label
+==================
+X-Label: important
+
+Body.
+
+---
+
+(source_file
+  (x_label_header
+    value: (header_value))
+  (body))
+
+==================
+Other: X-Comment-To
+==================
+X-Comment-To: Author Name
+
+Body.
+
+---
+
+(source_file
+  (x_comment_to_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Xref
+==================
+Xref: news.example.com comp.lang.c:12345
+
+Body.
+
+---
+
+(source_file
+  (xref_header
+    value: (header_value))
+  (body))
+
+==================
+Other: Supersedes
+==================
+Supersedes: <old-msg@example.com>
+
+Body.
+
+---
+
+(source_file
+  (supersedes_header
+    value: (header_value))
+  (body))

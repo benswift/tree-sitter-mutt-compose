@@ -1,0 +1,82 @@
+==================
+Neomutt pseudo: Fcc
+==================
+To: recipient@example.com
+Subject: Test
+Fcc: =sent
+
+Body.
+
+---
+
+(source_file
+  (to_header
+    value: (header_value))
+  (subject_header
+    value: (header_value))
+  (fcc_header
+    value: (header_value))
+  (body))
+
+==================
+Neomutt pseudo: Attach with path
+==================
+To: recipient@example.com
+Subject: Test
+Attach: /path/to/file.pdf
+
+Body.
+
+---
+
+(source_file
+  (to_header
+    value: (header_value))
+  (subject_header
+    value: (header_value))
+  (attach_header
+    value: (header_value))
+  (body))
+
+==================
+Neomutt pseudo: Attach with description
+==================
+To: recipient@example.com
+Subject: Test
+Attach: /path/to/file.pdf A PDF document
+
+Body.
+
+---
+
+(source_file
+  (to_header
+    value: (header_value))
+  (subject_header
+    value: (header_value))
+  (attach_header
+    value: (header_value))
+  (body))
+
+==================
+Neomutt pseudo: Multiple attachments
+==================
+To: recipient@example.com
+Subject: Files
+Attach: /path/to/doc1.pdf
+Attach: /path/to/doc2.pdf
+
+Body with context about the attachments.
+
+---
+
+(source_file
+  (to_header
+    value: (header_value))
+  (subject_header
+    value: (header_value))
+  (attach_header
+    value: (header_value))
+  (attach_header
+    value: (header_value))
+  (body))

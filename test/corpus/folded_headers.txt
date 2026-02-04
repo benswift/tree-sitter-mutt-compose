@@ -9,8 +9,7 @@ Body text here.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -29,11 +28,9 @@ Message body.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))
 
@@ -44,24 +41,20 @@ From: sender@example.com
 To: recipient1@example.com,
  recipient2@example.com
 Subject: Test
-Cc: 
+Cc:
 
 Body content.
 
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (from_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (to_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
-  (header
-    key: (header_key)
+  (cc_header
     value: (header_value))
   (body))
 
@@ -77,8 +70,7 @@ Email body.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (references_header
     value: (header_value))
   (body))
 
@@ -93,7 +85,6 @@ Content here.
 ---
 
 (source_file
-  (header
-    key: (header_key)
+  (subject_header
     value: (header_value))
   (body))

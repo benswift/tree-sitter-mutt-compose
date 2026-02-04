@@ -1,0 +1,127 @@
+==================
+Custom X- header
+==================
+X-Mailer: NeoMutt/20231234
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Custom X- header with long name
+==================
+X-My-Custom-Application-Header: some value
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Arbitrary unknown header
+==================
+Arbitrary-Header: unknown to neomutt
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Multiple custom headers
+==================
+X-Priority: 1
+X-Spam-Status: No
+X-Custom: test
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Mix of known and custom headers
+==================
+From: sender@example.com
+To: recipient@example.com
+Subject: Test
+X-Priority: 1
+X-Mailer: NeoMutt
+
+Body text.
+
+---
+
+(source_file
+  (from_header
+    value: (header_value))
+  (to_header
+    value: (header_value))
+  (subject_header
+    value: (header_value))
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Custom header with empty value
+==================
+X-Empty:
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))
+
+==================
+Custom header with folded value
+==================
+X-Long-Value: This is a very long value
+ that continues on the next line
+ and even a third line
+
+Body.
+
+---
+
+(source_file
+  (custom_header
+    key: (header_key)
+    value: (header_value))
+  (body))

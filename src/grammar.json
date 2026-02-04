@@ -19,7 +19,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "header"
+          "name": "_header"
         },
         {
           "type": "REPEAT",
@@ -32,7 +32,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "header"
+                "name": "_header"
               }
             ]
           }
@@ -51,7 +51,941 @@
         }
       ]
     },
-    "header": {
+    "_header": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "from_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "to_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cc_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bcc_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sender_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "reply_to_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "return_path_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "mail_followup_to_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "x_original_to_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "subject_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "message_id_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "in_reply_to_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "references_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "date_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expires_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content_type_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content_transfer_encoding_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content_disposition_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content_description_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content_language_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "content_length_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "mime_version_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "list_post_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "list_subscribe_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "list_unsubscribe_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "status_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "x_status_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "organization_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "newsgroups_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "followup_to_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "received_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "x_label_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "x_comment_to_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "xref_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "supersedes_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fcc_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "attach_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "custom_header"
+        }
+      ]
+    },
+    "from_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "From"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "to_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "To"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "cc_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Cc"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "bcc_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Bcc"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "sender_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Sender"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "reply_to_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Reply-To"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "return_path_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Return-Path"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "mail_followup_to_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Mail-Followup-To"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "x_original_to_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "X-Original-To"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "subject_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Subject"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "message_id_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Message-ID"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "in_reply_to_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "In-Reply-To"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "references_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "References"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "date_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Date"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "expires_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Expires"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "content_type_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Content-Type"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "content_transfer_encoding_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Content-Transfer-Encoding"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "content_disposition_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Content-Disposition"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "content_description_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Content-Description"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "content_language_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Content-Language"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "content_length_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Content-Length"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "mime_version_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "MIME-Version"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "list_post_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "List-Post"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "list_subscribe_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "List-Subscribe"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "list_unsubscribe_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "List-Unsubscribe"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "status_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Status"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "x_status_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "X-Status"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "organization_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Organization"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "newsgroups_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Newsgroups"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "followup_to_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Followup-To"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "received_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Received"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "x_label_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "X-Label"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "x_comment_to_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "X-Comment-To"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "xref_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Xref"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "supersedes_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Supersedes"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "fcc_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Fcc"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "attach_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Attach"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "header_value"
+          }
+        }
+      ]
+    },
+    "custom_header": {
       "type": "SEQ",
       "members": [
         {
