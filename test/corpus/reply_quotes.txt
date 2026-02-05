@@ -12,6 +12,7 @@ This is my reply.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -30,6 +31,7 @@ My response here.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -53,6 +55,7 @@ That's my view.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -73,6 +76,7 @@ My reply starts here.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -97,6 +101,7 @@ Answer 3.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -122,10 +127,13 @@ Agreed, that's the best part.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -144,6 +152,7 @@ Subject: Re: Formatting test
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -167,6 +176,7 @@ My reply also uses markdown:
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -190,5 +200,6 @@ john@example.com
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))

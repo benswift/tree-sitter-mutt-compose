@@ -11,10 +11,13 @@ Body.
 
 (source_file
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (fcc_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -31,10 +34,13 @@ Body.
 
 (source_file
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (attach_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -51,10 +57,13 @@ Body.
 
 (source_file
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (attach_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -72,11 +81,15 @@ Body with context about the attachments.
 
 (source_file
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (attach_header
+    key: (header_key)
     value: (header_value))
   (attach_header
+    key: (header_key)
     value: (header_value))
   (body))

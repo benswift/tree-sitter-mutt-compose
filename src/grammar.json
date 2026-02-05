@@ -212,8 +212,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "From"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "From"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -233,8 +242,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "To"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "To"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -254,8 +272,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Cc"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Cc"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -275,8 +302,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Bcc"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Bcc"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -296,8 +332,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Sender"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Sender"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -317,8 +362,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Reply-To"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Reply-To"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -338,8 +392,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Return-Path"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Return-Path"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -359,8 +422,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Mail-Followup-To"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Mail-Followup-To"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -380,8 +452,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "X-Original-To"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "X-Original-To"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -401,8 +482,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Subject"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Subject"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -422,8 +512,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Message-ID"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Message-ID"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -443,8 +542,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "In-Reply-To"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "In-Reply-To"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -464,8 +572,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "References"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "References"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -485,8 +602,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Date"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Date"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -506,8 +632,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Expires"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Expires"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -527,8 +662,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Content-Type"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Content-Type"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -548,8 +692,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Content-Transfer-Encoding"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Content-Transfer-Encoding"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -569,8 +722,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Content-Disposition"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Content-Disposition"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -590,8 +752,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Content-Description"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Content-Description"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -611,8 +782,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Content-Language"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Content-Language"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -632,8 +812,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Content-Length"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Content-Length"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -653,8 +842,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "MIME-Version"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "MIME-Version"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -674,8 +872,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "List-Post"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "List-Post"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -695,8 +902,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "List-Subscribe"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "List-Subscribe"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -716,8 +932,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "List-Unsubscribe"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "List-Unsubscribe"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -737,8 +962,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Status"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Status"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -758,8 +992,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "X-Status"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "X-Status"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -779,8 +1022,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Organization"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Organization"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -800,8 +1052,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Newsgroups"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Newsgroups"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -821,8 +1082,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Followup-To"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Followup-To"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -842,8 +1112,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Received"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Received"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -863,8 +1142,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "X-Label"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "X-Label"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -884,8 +1172,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "X-Comment-To"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "X-Comment-To"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -905,8 +1202,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Xref"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Xref"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -926,8 +1232,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Supersedes"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Supersedes"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -947,8 +1262,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Fcc"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Fcc"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",
@@ -968,8 +1292,17 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "Attach"
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "Attach"
+            },
+            "named": true,
+            "value": "header_key"
+          }
         },
         {
           "type": "STRING",

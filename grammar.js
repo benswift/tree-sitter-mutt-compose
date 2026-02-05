@@ -69,81 +69,94 @@ module.exports = grammar({
       ),
 
     // Address headers
-    from_header: ($) => seq("From", ":", field("value", $.header_value)),
-    to_header: ($) => seq("To", ":", field("value", $.header_value)),
-    cc_header: ($) => seq("Cc", ":", field("value", $.header_value)),
-    bcc_header: ($) => seq("Bcc", ":", field("value", $.header_value)),
-    sender_header: ($) => seq("Sender", ":", field("value", $.header_value)),
+    from_header: ($) =>
+      seq(field("key", alias("From", $.header_key)), ":", field("value", $.header_value)),
+    to_header: ($) =>
+      seq(field("key", alias("To", $.header_key)), ":", field("value", $.header_value)),
+    cc_header: ($) =>
+      seq(field("key", alias("Cc", $.header_key)), ":", field("value", $.header_value)),
+    bcc_header: ($) =>
+      seq(field("key", alias("Bcc", $.header_key)), ":", field("value", $.header_value)),
+    sender_header: ($) =>
+      seq(field("key", alias("Sender", $.header_key)), ":", field("value", $.header_value)),
     reply_to_header: ($) =>
-      seq("Reply-To", ":", field("value", $.header_value)),
+      seq(field("key", alias("Reply-To", $.header_key)), ":", field("value", $.header_value)),
     return_path_header: ($) =>
-      seq("Return-Path", ":", field("value", $.header_value)),
+      seq(field("key", alias("Return-Path", $.header_key)), ":", field("value", $.header_value)),
     mail_followup_to_header: ($) =>
-      seq("Mail-Followup-To", ":", field("value", $.header_value)),
+      seq(field("key", alias("Mail-Followup-To", $.header_key)), ":", field("value", $.header_value)),
     x_original_to_header: ($) =>
-      seq("X-Original-To", ":", field("value", $.header_value)),
+      seq(field("key", alias("X-Original-To", $.header_key)), ":", field("value", $.header_value)),
 
     // Identification headers
-    subject_header: ($) => seq("Subject", ":", field("value", $.header_value)),
+    subject_header: ($) =>
+      seq(field("key", alias("Subject", $.header_key)), ":", field("value", $.header_value)),
     message_id_header: ($) =>
-      seq("Message-ID", ":", field("value", $.header_value)),
+      seq(field("key", alias("Message-ID", $.header_key)), ":", field("value", $.header_value)),
     in_reply_to_header: ($) =>
-      seq("In-Reply-To", ":", field("value", $.header_value)),
+      seq(field("key", alias("In-Reply-To", $.header_key)), ":", field("value", $.header_value)),
     references_header: ($) =>
-      seq("References", ":", field("value", $.header_value)),
+      seq(field("key", alias("References", $.header_key)), ":", field("value", $.header_value)),
 
     // Date/time headers
-    date_header: ($) => seq("Date", ":", field("value", $.header_value)),
-    expires_header: ($) => seq("Expires", ":", field("value", $.header_value)),
+    date_header: ($) =>
+      seq(field("key", alias("Date", $.header_key)), ":", field("value", $.header_value)),
+    expires_header: ($) =>
+      seq(field("key", alias("Expires", $.header_key)), ":", field("value", $.header_value)),
 
     // MIME headers
     content_type_header: ($) =>
-      seq("Content-Type", ":", field("value", $.header_value)),
+      seq(field("key", alias("Content-Type", $.header_key)), ":", field("value", $.header_value)),
     content_transfer_encoding_header: ($) =>
-      seq("Content-Transfer-Encoding", ":", field("value", $.header_value)),
+      seq(field("key", alias("Content-Transfer-Encoding", $.header_key)), ":", field("value", $.header_value)),
     content_disposition_header: ($) =>
-      seq("Content-Disposition", ":", field("value", $.header_value)),
+      seq(field("key", alias("Content-Disposition", $.header_key)), ":", field("value", $.header_value)),
     content_description_header: ($) =>
-      seq("Content-Description", ":", field("value", $.header_value)),
+      seq(field("key", alias("Content-Description", $.header_key)), ":", field("value", $.header_value)),
     content_language_header: ($) =>
-      seq("Content-Language", ":", field("value", $.header_value)),
+      seq(field("key", alias("Content-Language", $.header_key)), ":", field("value", $.header_value)),
     content_length_header: ($) =>
-      seq("Content-Length", ":", field("value", $.header_value)),
+      seq(field("key", alias("Content-Length", $.header_key)), ":", field("value", $.header_value)),
     mime_version_header: ($) =>
-      seq("MIME-Version", ":", field("value", $.header_value)),
+      seq(field("key", alias("MIME-Version", $.header_key)), ":", field("value", $.header_value)),
 
     // Mailing list headers
     list_post_header: ($) =>
-      seq("List-Post", ":", field("value", $.header_value)),
+      seq(field("key", alias("List-Post", $.header_key)), ":", field("value", $.header_value)),
     list_subscribe_header: ($) =>
-      seq("List-Subscribe", ":", field("value", $.header_value)),
+      seq(field("key", alias("List-Subscribe", $.header_key)), ":", field("value", $.header_value)),
     list_unsubscribe_header: ($) =>
-      seq("List-Unsubscribe", ":", field("value", $.header_value)),
+      seq(field("key", alias("List-Unsubscribe", $.header_key)), ":", field("value", $.header_value)),
 
     // Status headers
-    status_header: ($) => seq("Status", ":", field("value", $.header_value)),
+    status_header: ($) =>
+      seq(field("key", alias("Status", $.header_key)), ":", field("value", $.header_value)),
     x_status_header: ($) =>
-      seq("X-Status", ":", field("value", $.header_value)),
+      seq(field("key", alias("X-Status", $.header_key)), ":", field("value", $.header_value)),
 
     // Other recognised headers
     organization_header: ($) =>
-      seq("Organization", ":", field("value", $.header_value)),
+      seq(field("key", alias("Organization", $.header_key)), ":", field("value", $.header_value)),
     newsgroups_header: ($) =>
-      seq("Newsgroups", ":", field("value", $.header_value)),
+      seq(field("key", alias("Newsgroups", $.header_key)), ":", field("value", $.header_value)),
     followup_to_header: ($) =>
-      seq("Followup-To", ":", field("value", $.header_value)),
+      seq(field("key", alias("Followup-To", $.header_key)), ":", field("value", $.header_value)),
     received_header: ($) =>
-      seq("Received", ":", field("value", $.header_value)),
-    x_label_header: ($) => seq("X-Label", ":", field("value", $.header_value)),
+      seq(field("key", alias("Received", $.header_key)), ":", field("value", $.header_value)),
+    x_label_header: ($) =>
+      seq(field("key", alias("X-Label", $.header_key)), ":", field("value", $.header_value)),
     x_comment_to_header: ($) =>
-      seq("X-Comment-To", ":", field("value", $.header_value)),
-    xref_header: ($) => seq("Xref", ":", field("value", $.header_value)),
+      seq(field("key", alias("X-Comment-To", $.header_key)), ":", field("value", $.header_value)),
+    xref_header: ($) =>
+      seq(field("key", alias("Xref", $.header_key)), ":", field("value", $.header_value)),
     supersedes_header: ($) =>
-      seq("Supersedes", ":", field("value", $.header_value)),
+      seq(field("key", alias("Supersedes", $.header_key)), ":", field("value", $.header_value)),
 
     // Neomutt pseudo-headers
-    fcc_header: ($) => seq("Fcc", ":", field("value", $.header_value)),
-    attach_header: ($) => seq("Attach", ":", field("value", $.header_value)),
+    fcc_header: ($) =>
+      seq(field("key", alias("Fcc", $.header_key)), ":", field("value", $.header_value)),
+    attach_header: ($) =>
+      seq(field("key", alias("Attach", $.header_key)), ":", field("value", $.header_value)),
 
     // Fallback for unknown/custom headers (X-* and others)
     custom_header: ($) =>

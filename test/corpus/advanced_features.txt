@@ -13,14 +13,19 @@ Please find the attached files.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (attach_header
+    key: (header_key)
     value: (header_value))
   (attach_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -39,14 +44,19 @@ Hello everyone!
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (cc_header
+    key: (header_key)
     value: (header_value))
   (bcc_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -66,16 +76,22 @@ Message with MIME headers.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (content_type_header
+    key: (header_key)
     value: (header_value))
   (content_transfer_encoding_header
+    key: (header_key)
     value: (header_value))
   (mime_version_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -95,16 +111,22 @@ Continuing the thread...
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (in_reply_to_header
+    key: (header_key)
     value: (header_value))
   (references_header
+    key: (header_key)
     value: (header_value))
   (message_id_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -134,10 +156,13 @@ MoreSignatureData==
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -160,10 +185,13 @@ MoreEncryptedData1234567890abcdefghijklmnopqrstuvwxyz
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -188,10 +216,13 @@ Thanks!
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -211,10 +242,13 @@ Body text.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (custom_header
     key: (header_key)
@@ -242,14 +276,19 @@ TODO: Finish this email later.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (date_header
+    key: (header_key)
     value: (header_value))
   (reply_to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -267,12 +306,16 @@ Let's meet at 2pm.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (date_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -292,15 +335,21 @@ Testing different date formats and timezones.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (date_header
+    key: (header_key)
     value: (header_value))
   (message_id_header
+    key: (header_key)
     value: (header_value))
   (reply_to_header
+    key: (header_key)
     value: (header_value))
   (body))

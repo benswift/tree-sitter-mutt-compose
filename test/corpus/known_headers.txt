@@ -9,6 +9,7 @@ Body.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -23,6 +24,7 @@ Body.
 
 (source_file
   (to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -37,6 +39,7 @@ Body.
 
 (source_file
   (cc_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -51,6 +54,7 @@ Body.
 
 (source_file
   (bcc_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -65,6 +69,7 @@ Body.
 
 (source_file
   (sender_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -79,6 +84,7 @@ Body.
 
 (source_file
   (reply_to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -93,6 +99,7 @@ Body.
 
 (source_file
   (return_path_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -107,6 +114,7 @@ Body.
 
 (source_file
   (mail_followup_to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -121,6 +129,7 @@ Body.
 
 (source_file
   (x_original_to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -135,6 +144,7 @@ Body.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -149,6 +159,7 @@ Body.
 
 (source_file
   (message_id_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -163,6 +174,7 @@ Body.
 
 (source_file
   (in_reply_to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -177,6 +189,7 @@ Body.
 
 (source_file
   (references_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -191,6 +204,7 @@ Body.
 
 (source_file
   (date_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -205,6 +219,7 @@ Body.
 
 (source_file
   (content_type_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -219,6 +234,7 @@ Body.
 
 (source_file
   (content_transfer_encoding_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -233,6 +249,7 @@ Body.
 
 (source_file
   (content_disposition_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -247,6 +264,7 @@ Body.
 
 (source_file
   (content_description_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -261,6 +279,7 @@ Body.
 
 (source_file
   (content_language_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -275,6 +294,7 @@ Body.
 
 (source_file
   (content_length_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -289,6 +309,7 @@ Body.
 
 (source_file
   (mime_version_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -303,6 +324,7 @@ Body.
 
 (source_file
   (list_post_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -317,6 +339,7 @@ Body.
 
 (source_file
   (list_subscribe_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -331,6 +354,7 @@ Body.
 
 (source_file
   (list_unsubscribe_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -345,6 +369,7 @@ Body.
 
 (source_file
   (organization_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -359,6 +384,7 @@ Body.
 
 (source_file
   (newsgroups_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -373,6 +399,7 @@ Body.
 
 (source_file
   (followup_to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -387,6 +414,7 @@ Body.
 
 (source_file
   (expires_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -401,6 +429,7 @@ Body.
 
 (source_file
   (received_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -415,6 +444,7 @@ Body.
 
 (source_file
   (status_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -429,6 +459,7 @@ Body.
 
 (source_file
   (x_status_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -443,6 +474,7 @@ Body.
 
 (source_file
   (x_label_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -457,6 +489,7 @@ Body.
 
 (source_file
   (x_comment_to_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -471,6 +504,7 @@ Body.
 
 (source_file
   (xref_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -485,5 +519,6 @@ Body.
 
 (source_file
   (supersedes_header
+    key: (header_key)
     value: (header_value))
   (body))

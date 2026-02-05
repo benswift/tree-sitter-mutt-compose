@@ -10,6 +10,7 @@ Body text here.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -29,8 +30,10 @@ Message body.
 
 (source_file
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -49,12 +52,16 @@ Body content.
 
 (source_file
   (from_header
+    key: (header_key)
     value: (header_value))
   (to_header
+    key: (header_key)
     value: (header_value))
   (subject_header
+    key: (header_key)
     value: (header_value))
   (cc_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -71,6 +78,7 @@ Email body.
 
 (source_file
   (references_header
+    key: (header_key)
     value: (header_value))
   (body))
 
@@ -86,5 +94,6 @@ Content here.
 
 (source_file
   (subject_header
+    key: (header_key)
     value: (header_value))
   (body))

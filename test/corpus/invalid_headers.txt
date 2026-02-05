@@ -43,6 +43,7 @@ Body.
 
 (source_file
   (subject_header
+    (header_key)
     (ERROR
       (UNEXPECTED ' '))
     (header_value))
